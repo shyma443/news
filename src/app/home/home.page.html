@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let news of newsList?.articles; let i= index"  [routerLink]="['/details',i]">
+        <ion-img [src]="news.urlToImage"></ion-img>
+        <p>{{news.title}}</p>
+    </ion-row>
+  </ion-grid>
+</ion-content>
